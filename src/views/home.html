@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hot Chat ;) </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+</head>
+<body>
+
+    <div>
+        Message: <input type="text" name="message" id="message" />
+        <input type="hidden" name="_csrf" id="csrf" value="<%= csrfToken %>" />
+        <button onclick="sendMessage()">Send</button> <br>
+    </div>
+
+    <a href="/api/v1/user/logout" >Log Out</a>
+    <div id="hotchat"> </div>
+
+    <script src="/js/chat.js"> </script>
+    <script src="/js/message.js"> </script>
+</body>
+</html>
